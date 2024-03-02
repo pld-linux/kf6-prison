@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	5.249.0
+%define		kdeframever	6.0
 %define		qtver		5.15.2
 %define		kfname		prison
 
 Summary:	A barcode abstraction layer
 Name:		kf6-%{kfname}
-Version:	5.249.0
-Release:	0.1
+Version:	6.0.0
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
-Source0:	https://download.kde.org/unstable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	a0f8a4100bf3f320b42741b75abe4954
+Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
+# Source0-md5:	0f56b81c3aa5b419d137fbe55f1a57ac
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
@@ -87,9 +87,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_datadir}/qlogging-categories6/prison.categories
 %ghost %{_libdir}/libKF6Prison.so.6
-%{_libdir}/libKF6Prison.so.5.*.*
+%attr(755,root,root) %{_libdir}/libKF6Prison.so.*.*
 %ghost %{_libdir}/libKF6PrisonScanner.so.6
-%{_libdir}/libKF6PrisonScanner.so.5.*.*
+%attr(755,root,root) %{_libdir}/libKF6PrisonScanner.so.*.*
 %{_libdir}/qt6/qml/org/kde/prison
 %{_datadir}/qlogging-categories6/prison.renamecategories
 
