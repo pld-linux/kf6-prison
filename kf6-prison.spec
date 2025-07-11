@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	6.15
+%define		kdeframever	6.16
 %define		qtver		5.15.2
 %define		kfname		prison
 
 Summary:	A barcode abstraction layer
 Name:		kf6-%{kfname}
-Version:	6.15.0
+Version:	6.16.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	cbcf42ddfc67cc9b1fa6e1a3c063fc51
+# Source0-md5:	71781c9586430d2b6ab3073a69570a70
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
