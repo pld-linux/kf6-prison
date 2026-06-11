@@ -47,6 +47,15 @@ Prison currently ships a BarcodeWidget, which is a QWidget with a
 barcode painted upon, as well as a BarcodeItem, which is a
 QGraphicsItem with a barcode painted upon.
 
+%description -l pl.UTF-8
+Prison ma Prison::AbstractBarcode, która jest klasą bazową dla
+generatorów kodów paskowych. Obecnie są dwie implementacje:
+Prison::QRCodeBarcode i Prison::DataMatrixBarcode.
+
+Prison dostarcza też BarcodeWidget, ktory jest QWidget-em z
+namalowanym na nim kodem paskowym, a także BarcodeItem, który jest
+podklasą QGraphicsItem, też z narysowanym kodem paskowym.
+
 %package devel
 Summary:	Header files for %{kfname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kfname}
